@@ -1,0 +1,23 @@
+package com.lg.service;
+
+import java.util.List;
+
+import com.lg.dto.MemberDTO;
+
+public class MemberServiceImpl implements MemberService{
+
+	@
+	
+	@Override
+	public List<MemberDTO> memberList() throws Exception {
+		return null;
+	}
+
+	@Override
+	public MemberDTO getMember(String id) throws Exception {
+		return null;
+	}
+	
+	
+	
+}

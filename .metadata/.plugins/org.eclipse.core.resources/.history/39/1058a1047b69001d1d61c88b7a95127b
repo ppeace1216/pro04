@@ -1,0 +1,15 @@
+package com.lg.dao;
+
+import java.util.List;
+
+import com.lg.dto.MemberDTO;
+
+public class MemberDAOimpl implements MemberDAO {
+
+	@Override
+	public List<MemberDTO> memberList() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
