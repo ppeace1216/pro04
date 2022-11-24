@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="com.lg.dao.MemberDAOimpl" project="pro04" 
-    file="/pro04/src/main/java/com/lg/dao/MemberDAOimpl.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="com.lg.dao.MemberDAOImpl" project="pro04" 
+    file="/pro04/src/main/java/com/lg/dao/MemberDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="502" y="268"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,30 +55,38 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <realization id="8">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <association id="9">    
+  <association id="7">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="10" name="memberService"/>      
-      <multiplicity id="11" minimum="0" maximum="1"/>    
+      <attribute id="8" name="memberService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="9" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="12">    
+  <realization id="10">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="11">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="13" name="memberDao"/>      
-      <multiplicity id="14" minimum="0" maximum="1"/>    
+      <attribute id="12" name="memberDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="14">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

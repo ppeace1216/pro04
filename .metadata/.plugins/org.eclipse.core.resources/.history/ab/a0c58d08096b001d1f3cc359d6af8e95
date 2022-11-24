@@ -1,0 +1,13 @@
+package com.lg.dao;
+
+import java.util.List;
+
+import com.lg.dto.BoardDTO;
+import com.lg.dto.MemberDTO;
+
+public class BoardDAO {
+
+	public List<BoardDTO> boardList() throws Exception;
+
+	public MemberDTO getBoard(String id) throws Exception;
+}
