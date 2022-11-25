@@ -1,0 +1,73 @@
+package com.lg.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.lg.dto.FreeDTO;
+import com.lg.service.FreeService;
+
+@Controller
+@RequestMapping("/free/*")
+public class FreeController {
+
+	@Autowired
+	FreeService freeService;
+	
+	@RequestMapping("list.do")
+	public String freeList(Model model) throws Exception {
+		List<FreeDTO> freeList = freeService.freeList();
+		model.addAttribute("freeList",freeList);
+		return "free/freeList";
+	}
+	@GetMapping("detail.do")
+	public String getfreeDetail(HttpServletRequest request, Model model) throws Exception {
+		int feq = Integer.parseInt(request.getParameter("feq"));
+		FreeDTO dto = freeService.freeDetail(feq);
+		model.addAttribute("dto", dto);
+		return "free/freeDetail";
+	}
+	@GetMapping("insert.do")
+	public String insertForm(HttpServletRequest request, Model model) throws Exception {
+		return "free/freeInsert";
+	}
+	@PostMapping("insert.do")
+	public String freeInsert(HttpServletRequest request, Model model) throws Exception {
+		FreeDTO dto = new FreeDTO();
+		dto.setTitle(request.getParameter("title"));
+		dto.setContent(request.getParameter("content"));
+		dto.setId(request.getParameter("id"));
+		freeService.freeInsert(dto);
+		return "redirect:list.do";
+	}
+	@GetMapping("delete.do")
+	public String freeDelete(HttpServletRequest request, Model model) throws Exception {
+		int feq = Integer.parseInt(request.getParameter("feq"));
+		freeService.freeDelete(feq);
+		return "redirect:list.do";
+	}
+	@GetMapping("edit.do")
+	public String editForm(HttpServletRequest request, Model model) throws Exception {
+		int feq = Integer.parseInt(request.getParameter("feq"));
+		FreeDTO dto = freeService.freeDetail(feq);
+		model.addAttribute("dto", dto);
+		return "free/freeEdit";
+	}
+	@PostMapping("edit.do")
+	public String freeEdit(HttpServletRequest request, Model model) throws Exception {
+		int feq = Integer.parseInt(request.getParameter("feq"));
+		FreeDTO dto = new FreeDTO();
+		dto.setFeq(feq);
+		dto.setTitle(request.getParameter("title"));
+		dto.setContent(request.getParameter("content"));
+		freeService.freeInsert(dto);
+		return "redirect:list.do";
+	}
+}

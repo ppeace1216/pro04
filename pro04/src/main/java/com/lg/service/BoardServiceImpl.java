@@ -16,7 +16,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public List<BoardDTO> boardList() throws Exception {
-		return null;
+		return boardDAO.boardList();
 	}
 
 	@Override
@@ -25,10 +25,19 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public void boardInsert(String title, String content) throws Exception {
-		
-		
+	public void boardInsert(BoardDTO dto) throws Exception {
+		boardDAO.boardInsert(dto);
 	}
-	
+
+	@Override
+	public void boardDelete(int seq) throws Exception {
+		boardDAO.boardDelete(seq);
+	}
+
+	@Override
+	public void boardEdit(BoardDTO dto) throws Exception {
+		boardDAO.boardEdit(dto);
+	}
+
 	
 }

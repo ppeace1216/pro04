@@ -25,10 +25,20 @@ public class BoardDAOImpl implements BoardDAO{
 	}
 
 	@Override
-	public void boardInsert(String title, String content) throws Exception {
-		sqlSession.insert("board.boardInsert");
+	public void boardInsert(BoardDTO dto) throws Exception {
+		sqlSession.insert("board.boardInsert", dto);
+	}
+
+	@Override
+	public void boardDelete(int seq) throws Exception {
+		sqlSession.delete("board.boardDelete", seq);
 		
 	}
 
+	@Override
+	public void boardEdit(BoardDTO dto) throws Exception {
+		sqlSession.update("board.boardEdit", dto);
+		
+	}
 	
 }

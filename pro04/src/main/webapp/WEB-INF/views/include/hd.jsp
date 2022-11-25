@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path1" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +59,7 @@
           <li><a href="#Item-3A">인재상</a></li>
           <li><a href="#Item-3B">인사제도</a></li>
           <li><a href="#Item-3C">채용절차</a></li>
-          <li><a href="#Item-3D">채용공고</a></li>
+          <li><a href="${path1 }/board/list.do">채용공고</a></li>
       	</ul>
       </li>
       <li>

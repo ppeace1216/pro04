@@ -24,3 +24,9 @@ insert into board values((select nvl(max(seq), 0)+1 from board), '제목12', '�
 select * from board;
 select * from board order by regdate desc;
 commit;
+desc board;
+
+create table free (feq number primary key, title varchar2(100) not null, content varchar2(1000), id varchar2(20), regdate date default sysdate, visited number);
+insert into free values (1, '첫번째 자유게시판', '여기는 내용', 'admin', sysdate, 0);
+select * from free;
+commit;
