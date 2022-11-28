@@ -145,6 +145,13 @@
 		    <version>1.16</version>
 		</dependency>
 		
+		<!-- spring provider : 스프링에서 계약 테스트도구가 필요할 때 사용하는 라이브러리 -->
+<!-- 		<dependency>
+		    <groupId>au.com.dius.pact.provider</groupId>
+		    <artifactId>spring</artifactId>
+		    <version>4.3.2</version>
+		</dependency> -->
+		
 		<!-- 스프링 트랜잭션 라이브러리 -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
@@ -186,11 +193,34 @@
 		    <version>1.3.2</version>
 		</dependency>
 		
+		<!-- 구글 JSON -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.12.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20200518</version>
+		</dependency>
+		
 		<!-- jackson 라이브러리 -->
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.9.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
 		</dependency>
 		
 		<!-- 스프링 프레임워크 비밀번호 암호화 및 보안 라이브러리(core, web, config) -->		
@@ -243,6 +273,33 @@
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-context-support</artifactId>
 		    <version>${org.springframework-version}</version>
+		</dependency>
+
+		<!-- java의 validation 라이브러리 -->		
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>2.0.1.Final</version>
+		</dependency>
+		
+		<!-- 폼 검증을 애노테이션으로 검증하도록 하는 hibernate 라이브러리 -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-annotations</artifactId>
+		    <version>3.5.6-Final</version>
+		</dependency> 
+		
+		<!--  hibernate Validator 라이브러리 -->
+		<dependency>
+		    <groupId>org.hibernate.validator</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>6.0.8.Final</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		    <version>2.3.0</version>
 		</dependency>
 
 <!-- 	mysql jdbc

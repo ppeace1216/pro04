@@ -23,44 +23,44 @@
 </header>
 <div class="content" id="content">
 	<div class="row column text-center">
-      <h2>자유게시판 작성</h2>
-      <hr>
-      <div class="container">
-      	<form action="${path1 }/free/insert.do" method="post">
-		   <table id="table1">
-			 <tbody>
-			    <tr>
-			      <th>제목</th>
-			      <td>
-			      	<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
-			      </td>
-			    </tr>
-			    <tr>
-			      <th>내용</th>
-			      <td>
-			      	<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength=900 required></textarea>
-			      	<script>
-			      	CKEDITOR.replace('content', {filebrowserUploadUrl:'/free/imageUpload.do'});
-			      	</script>
-			      </td>
-			    </tr>
-			    <tr>
-			      <th>작성자</th>
-			      <td>
-			      	<input type="text" name="id" id="id" maxlength="20" required>
-			      </td>
-			    </tr>
-			    <tr>
-	      			<td colspan="2">
-	      				<input type="submit" class="submit success button" value="글 등록" >
-	      				<a class="button" href="${path1 }/free/list.do">글 목록</a>
-	      			</td>
-	      		</tr>
-			  </tbody>
-			</table>
+	     <h2>자유게시판 작성</h2>
+	     <hr>
+	     <div class="container">
+	     	<form action="${path1 }/free/insert.do" method="post">
+				<table id="table1">
+					<tbody>
+						<tr>
+							<th>제목</th>
+							<td>
+								<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
+							</td>
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td>
+								<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength=900 required></textarea>
+								<script>
+								CKEDITOR.replace('content', {filebrowserUploadUrl:'/free/imageUpload.do'});
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<th>작성자</th>
+							<td>
+								<input type="text" name="id" id="id" maxlength="20" required>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" class="submit success button" value="글 등록" >
+								<a class="button" href="${path1 }/free/list.do">글 목록</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</form>
 		</div>
-    </div>
+	</div>
 </div>
 <footer id="footer" class="footer-nav row expanded collapse">
 	<!-- 푸터 부분 인클루드 -->

@@ -20,4 +20,7 @@
 	<update id="boardEdit">
 		update board set title=#{title}, content=#{content} where seq=#{seq}
 	</update>
+	<update id="countUp">
+		update board set visited=visited+1 where seq=#{seq}
+	</update>
 </mapper>

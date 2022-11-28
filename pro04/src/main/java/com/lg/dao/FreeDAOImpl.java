@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.lg.dto.FreeDTO;
 
@@ -12,16 +13,18 @@ import com.lg.dto.FreeDTO;
 public class FreeDAOImpl implements FreeDAO{
 
 	@Autowired
-	SqlSession sqlSession;
+	private SqlSession sqlSession;
 	
 	@Override
 	public List<FreeDTO> freeList() throws Exception {
 		return sqlSession.selectList("free.freeList");
 	}
-
+	
+	@Transactional
 	@Override
 	public FreeDTO freeDetail(int feq) throws Exception {
-		return sqlSession.selectOne("free.freeDetail");
+		sqlSession.update("free.countUp", feq);
+		return sqlSession.selectOne("free.freeDetail",feq);
 	}
 
 	@Override

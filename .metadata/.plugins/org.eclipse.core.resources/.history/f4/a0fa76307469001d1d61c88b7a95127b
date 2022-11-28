@@ -1,7 +1,0 @@
-package com.lg.controller;
-
-@Controller
-@RequestMapping("/member/*")
-public class MemberController {
-
-}

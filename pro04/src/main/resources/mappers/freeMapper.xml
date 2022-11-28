@@ -20,4 +20,7 @@
 	<update id="freeEdit">
 		update free set title=#{title}, content=#{content} where feq=#{feq}
 	</update>
+		<update id="countUp">
+		update board set visited=visited+1 where feq=#{feq}
+	</update>
 </mapper>
