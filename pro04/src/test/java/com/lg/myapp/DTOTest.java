@@ -16,7 +16,7 @@ public class DTOTest {
 		dto.setName("평화");
 		dto.setId("peace");
 		dto.setPw("1234");
-		dto.setAddr("서삼릉1길 65-13");
+		dto.setAddr1("서삼릉1길 65-13");
 		dto.setTel("01081200204");
 		dto.setRegdate("2022-11-23");
 		dto.setPt(1000);

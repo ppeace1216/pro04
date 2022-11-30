@@ -5,6 +5,21 @@ alter table member modify password varchar2(300);
 alter table member rename COLUMN password to pw;
 alter table member rename COLUMN address to addr;
 alter table member rename COLUMN mempoint to pt;
+drop table member;
+create table member(id varchar2(20) primary key,
+pw varchar2(300) not null,
+name varchar2(50),
+email varchar2(100) not null,
+tel varchar2(20) not null,
+addr1 varchar2(200),
+addr2 varchar2(100),
+postcode varchar2(10),
+regdate date default sysdate,
+birth date,
+pt int default 100,
+visited int default 0
+);
+
 
 create table board (seq number primary key, title varchar2(100) not null, content varchar2(1000), nickname varchar2(20), regdate date default sysdate, visited number);
 
