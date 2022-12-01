@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="faq">
+	<select id="faqList" resultType="com.lg.dto.FaqDTO">
+		select * from faq order by parno asc, lev asc
+	</select>
+	<!-- 글 수 카운트 -->
+	<select id="totalCount" resultType="integer" >
+		select count(*) from faq
+	</select>
+	<select id="faqDetail" resultType="com.lg.dto.FaqDTO">
+		select * from faq where no=#{no}
+	</select>
+	<insert id="qInsert">
+		insert into faq values (fseq.nextval, #{title}, #{content}, 0, fseq.currval)
+	</insert>
+	<insert id="aInsert">
+		insert into faq values (fseq.nextval, #{title}, #{content}, 1, #{parno})
+	</insert>
+	<delete id="faqDelete">
+		delete from faq where no=#{no}
+	</delete>
+	<update id="faqEdit">
+		update faq set title=#{title}, content=#{content} where no=#{no}
+	</update>
+</mapper>

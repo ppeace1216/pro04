@@ -80,7 +80,7 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-			<!-- <scope>runtime</scope> -->
+			<scope>runtime</scope>
 		</dependency>
 
 		<!-- @Inject : 의존성 주입 라이브러리 -->
@@ -131,7 +131,7 @@
 			<version>3.2.0</version>
 		</dependency>    
 		
-		<!--  getter, setter, constructer를 자동 생성해주는 라이브러리 -->
+		<!--  lombok : getter, setter, constructer를 자동 생성해주는 라이브러리 -->
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
@@ -139,7 +139,7 @@
 		    <scope>provided</scope>
 		</dependency>
 
-		<!--  log4jdbc-log4j2-jdbc4 : DB 접속로그를 기록하는 라이브러리 -->
+		<!--  log4jdbc-log4j2-jdbc4 : DB 접속로그를 기록하는 라이브러리 (데이터베이스 로깅 도구) -->
 		<dependency>
 		    <groupId>org.bgee.log4jdbc-log4j2</groupId>
 		    <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
@@ -153,14 +153,14 @@
 		    <version>4.3.2</version>
 		</dependency> -->
 		
-		<!-- 스프링 트랜잭션 라이브러리 -->
+		<!-- 스프링 트랜잭션(DB연동) 라이브러리 -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-tx</artifactId>
 		    <version>${org.springframework-version}</version>
 		</dependency>
 		
-		<!-- 스프링 jdbc 라이브러리 -->
+		<!-- 스프링 jdbc 라이브러리(스프링 RDBMS 연결 도구) -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-jdbc</artifactId>
@@ -174,7 +174,7 @@
 		    <version>1.4</version>
 		</dependency>
 		
-		<!--  오라클 jdbc 라이브러리 -->
+		<!--  오라클 jdbc 라이브러리 11g = 11.2 -->
 		<dependency>
 		    <groupId>com.oracle.database.jdbc</groupId>
 		    <artifactId>ojdbc6</artifactId>
@@ -182,20 +182,20 @@
 		</dependency>
 		
 		<!-- MySQL jdbc 라이브러리 -->
-		<dependency>
-		    <groupId>mysql</groupId>
+<!--		<dependency>
+ 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>8.0.28</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- MariaDB jdbc 라이브러리 -->
-		<dependency>
+<!-- 		<dependency>
 		    <groupId>org.mariadb.jdbc</groupId>
 		    <artifactId>mariadb-java-client</artifactId>
 		    <version>2.7.4</version>
-		</dependency>
+		</dependency> -->
 
-		<!-- SQL 구문을 XML로 쉽게 구현하기 위한 MyBatis 라이브러리 -->
+		<!-- NoSQL! SQL 구문을 XML로 쉽게 구현하기 위한 MyBatis 라이브러리 -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
@@ -208,7 +208,7 @@
 		    <version>1.3.2</version>
 		</dependency>
 		
-		<!-- 구글 JSON -->
+		<!-- 구글 JSON = GSON -->
 		<dependency>
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>
@@ -225,20 +225,20 @@
 		    <version>20200518</version>
 		</dependency>
 		
-		<!-- jackson 라이브러리 -->
+		<!-- jackson(json 표준 라이브러리) 라이브러리 gson 안 될 경우 대비 -->
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.9.4</version>
 		</dependency>
-		
+		<!-- mapper -->
 		<dependency>
 		    <groupId>org.codehaus.jackson</groupId>
 		    <artifactId>jackson-mapper-asl</artifactId>
 		    <version>1.9.13</version>
 		</dependency>
 		
-		<!-- 스프링을 활용한 비밀번호 암호화 필요한 라이브러리 core, web, config -->
+		<!-- 스프링을 활용한 비밀번호 암호화(security crypto) 필요한 라이브러리 core, web, config -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-core</artifactId>
@@ -293,18 +293,21 @@
 		    <artifactId>validation-api</artifactId>
 		    <version>2.0.1.Final</version>
 		</dependency>
+		
 		<!-- 폼 검증을 애노테이션으로 검증하도록 하는 hibernate 라이브러리 -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-annotations</artifactId>
 		    <version>3.5.6-Final</version>
 		</dependency> 
+		
 		<!--  hibernate Validator 라이브러리 -->
 		<dependency>
 		    <groupId>org.hibernate.validator</groupId>
 		    <artifactId>hibernate-validator</artifactId>
 		    <version>6.0.8.Final</version>
 		</dependency>
+		
 		<dependency>
 		    <groupId>javax.xml.bind</groupId>
 		    <artifactId>jaxb-api</artifactId>
@@ -374,4 +377,12 @@
             </plugin>
         </plugins>
     </build>
+    <!-- 오라클 자꾸 날아갈 때 추가로 넣어주기 -->
+    <repositories>
+    	<repository>
+    		<id>oracla</id>
+    		<name>Oracle JDBC Repository</name>
+    		<url>http://repo.spring.io/plugins-release</url>
+    	</repository>
+    </repositories>
 </project>

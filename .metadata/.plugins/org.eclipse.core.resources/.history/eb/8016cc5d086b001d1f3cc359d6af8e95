@@ -1,5 +1,0 @@
-package com.lg.service;
-
-public interface BoardService {
-
-}

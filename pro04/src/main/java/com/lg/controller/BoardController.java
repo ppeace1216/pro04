@@ -66,7 +66,7 @@ public class BoardController {
 		dto.setSeq(seq);
 		dto.setTitle(request.getParameter("title"));
 		dto.setContent(request.getParameter("content"));
-		boardService.boardInsert(dto);
+		boardService.boardEdit(dto);
 		return "redirect:list.do";
 	}
 }

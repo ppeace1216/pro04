@@ -45,3 +45,29 @@ create table free (feq number primary key, title varchar2(100) not null, content
 insert into free values (1, '첫번째 자유게시판', '여기는 내용', 'admin', sysdate, 0);
 select * from free;
 commit;
+
+desc free;
+
+update board set title='수정수정', content='수정확인' where seq=1;
+
+create table faq(
+    no number primary key,
+    title varchar2(100) not null,
+    content varchar2(1000) not null,
+    lev number not null,
+    parno number not null
+    );
+drop table faq;
+create sequence fseq;
+desc faq;
+
+insert into faq values(fseq.nextval, '첫번째 질문', '첫번째 질문 내용', 0, fseq.currval);
+insert into faq values(fseq.nextval, '두번째 질문', '두번째 질문 내용', 0, fseq.currval);
+insert into faq values(fseq.nextval, '세번째 질문', '세번째 질문 내용', 0, fseq.currval);
+insert into faq values(fseq.nextval, '첫번재 답변', '첫번째 답변 내용', 1, 1);
+insert into faq values(fseq.nextval, '두번재 답변', '두번째 답변 내용', 1, 2);
+insert into faq values(fseq.nextval, '세번재 답변', '세번째 답변 내용', 1, 3);
+
+select * from faq;
+commit;
+select * from faq order by parno asc, lev asc;

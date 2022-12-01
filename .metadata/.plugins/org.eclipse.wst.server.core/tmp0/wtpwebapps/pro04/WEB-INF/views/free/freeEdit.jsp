@@ -21,7 +21,7 @@
 	<!-- 헤더 부분 인클루드 -->
  	<jsp:include page="../include/hd.jsp"></jsp:include>
 </header>
-<div class="content" id="content">
+<div class="content" id="con">
 	<div class="row column text-center">
       <h2>자유게시판 수정</h2>
       <hr>
@@ -48,7 +48,7 @@
 	      		<tr>
 			      <th>작성자</th>
 			      <td>
-			      	<input type="text" name="id" id="id" maxlength="20" required>
+			      	<input type="text" name="id" id="id" maxlength="20" value="${dto.id }" required readonly>
 			      </td>
 			    </tr>
 	      		<tr>

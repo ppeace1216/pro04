@@ -28,15 +28,8 @@
 <article class="grid-container">
       <div class="grid-x grid-margin-x">
     
-        <div class="medium-7 large-6 cell">
-          <h1>Close Your Eyes and Open Your Mind</h1>
-          <p class="subheader">There is beauty in space, and it is orderly. There is no weather, and there is regularity. It is predictable. Everything in space obeys the laws of physics. If you know these laws, and obey them, space will treat you kindly.</p>
-          <button class="button">Take a Tour</button>
-          <button class="button">Start a free trial</button>
-        </div>
-    
-        <div class="show-for-large large-3 cell">
-          <img src="https://placeimg.com/400/370/people" alt="picture of space">
+        <div class="main">
+          <img src="resources/images/main.png" alt="picture of space">
         </div>
     
         <div class="medium-5 large-3 cell">
@@ -101,66 +94,6 @@
         </div>
     
       </div>
-    
-    <div class="">
-      <hr>
-    </div>
-    
-    <div class="">
-      <p class="lead">Trending Planetary Destinations</p>
-    </div>
-    
-    <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
-      <div class="cell">
-        <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/any" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/animals" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/nature" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/tech" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/arch" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/people" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-        </div>
-      </div>
-    
-    </div>
     
 </article>
 <footer id="footer" class="footer-nav row expanded collapse">

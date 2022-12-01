@@ -22,19 +22,10 @@
           <li>
           	<a href="#Item-1A">회사소개</a>
           	<ul class="menu">
-              <li><a href="#Item-1Bi">회사소개</a></li>
-              <li><a href="#Item-1Bii">CEO</a></li>
+              <li><a href="WEP-INF/view/company/comInfo.jsp">회사소개</a></li>
+              <li><a href="WEP-INF/company/ceo.jsp">CEO</a></li>
               <li><a href="#Item-1Biii">비전</a></li>
               <li><a href="#Item-1Biv">연혁</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#Item-1B">경영활동</a>
-            <ul class="menu">
-              <li><a href="#Item-1Bi">고객가치경영</a></li>
-              <li><a href="#Item-1Bii">정도경영</a></li>
-              <li><a href="#Item-1Biii">안전 / 환경 / 보건</a></li>
-              <li><a href="#Item-1Biv">사회공헌</a></li>
             </ul>
           </li>
           <li>
@@ -65,8 +56,8 @@
       <li>
       	<a href="#Item-4">고객지원</a>
       	<ul class="menu">
-          <li><a href="#Item-4A">고객문의</a></li>
-          <li><a href="#Item-4B">FAQ</a></li>
+          <li><a href="${path1 }/free/list.do">고객문의</a></li>
+          <li><a href="${path1 }/faq/list.do">FAQ</a></li>
           <li><a href="#Item-4C">찾아오시는 길</a></li>
       	</ul>
       </li>
