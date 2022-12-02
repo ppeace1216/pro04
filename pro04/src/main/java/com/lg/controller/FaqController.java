@@ -28,6 +28,14 @@ public class FaqController {
 		return "faq/faqList";
 	}
 	
+	@RequestMapping("detail.do")
+	public String faqDetail(HttpServletRequest request, Model model) throws Exception {
+		int no = Integer.parseInt(request.getParameter("no"));
+		FaqDTO dto = faqService.faqDetail(no);
+		model.addAttribute("dto", dto);
+		return "faq/faqDetail";
+	}
+	
 	@GetMapping("qInsert.do")
 	public String qInsertForm(HttpServletRequest request, Model model) throws Exception {
 		return "faq/qInsert";

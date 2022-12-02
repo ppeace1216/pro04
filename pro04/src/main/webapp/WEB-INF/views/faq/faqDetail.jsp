@@ -29,7 +29,7 @@
 			 <tbody>
 			    <tr>
 	      			<th>번호</th>
-	      			<td>${dto.seq }</td>
+	      			<td>${dto.no }</td>
 	      		</tr>	
 	      		<tr>
 	      			<th>제목</th>
@@ -39,25 +39,15 @@
 	      			<th>내용</th>
 	      			<td><p>${dto.content }</p></td>
 	      		</tr>
-	      		<tr>
-	      			<th>작성자</th>
-	      			<td>${dto.nickname }</td>
-	      		</tr>
-	      		<tr>
-	      			<th>작성일시</th>
-	      			<td>${dto.regdate }</td>
-	      		</tr>
-	      		<tr>
-	      			<th>읽은 횟수</th>
-	      			<td>${dto.visited }</td>
-	      		</tr>
 			  </tbody>
 			</table>
-				<div class="button-group">
-				  <a class="button" href="${path1 }/board/list.do">글 목록</a>
-				  <a class="button" href="${path1 }/board/delete.do?seq=${dto.seq}">글 삭제</a>
-				  <a class="button" href="${path1 }/board/edit.do?seq=${dto.seq}">글 수정</a>
-				</div>
+			<div class="button-group">
+			  <a class="button" href="${path1 }/faq/list.do">FAQ 목록</a>
+			  <c:if test='${sid=="admin" }'>
+			  <a class="button" href="${path1 }/faq/delete.do?no=${dto.no}">글 삭제</a>
+			  <a class="button" href="${path1 }/faq/edit.do?no=${dto.no}">글 수정</a>
+			  </c:if>
+			</div>
 		</div>
     </div>
 </div>

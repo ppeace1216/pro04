@@ -34,13 +34,13 @@
 <style>
 ul { list-style:none; }
 #gnb > ul > li[role="menuitem"] { height:38px; }
-#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; }
+#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; font-size:30px}
 .h1 { padding-top:0.9rem; padding-bottom:0.3rem; }
-.container { clear:both; width:1200px; margin:0 auto; }
+.container { clear:both; width:1400px; margin:0 auto; }
 .container::after { content:""; display:block; width:100%; clear:both; }
 #table1 th { border-bottom:1px solid #fff; }
 .footer-nav {	background-color:#2d2d2d; height:80px; box-sizing:border-box; overflow:hidden; }
-.footer-nav > article { clear:both; width:1200px; margin:0px auto; height:80px; }
+.footer-nav > article { clear:both; width:1400px; margin:0px auto; height:80px; }
 .footer-nav > article > div { float:left; }
 .footer-nav-left { color:#fff; width:25%; line-height:80px; }
 .footer-nav-center {

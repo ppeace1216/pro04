@@ -22,35 +22,32 @@
 </header>
 <div class="content" id="content">
 	<div class="row column text-center">
-      <h2>공지사항 작성</h2>
+      <h2>자주하는 질문 답변 작성</h2>
       <hr>
       <div class="container">
-      	<form action="${path1 }/board/insert.do" method="post">
+      	<form action="${path1 }/faq/aInsert.do" method="post">
 		   <table id="table1">
-			  <thead>
+			 <tbody>
 			    <tr>
-			      <th width="100">NO</th>
-			      <th>TITLE</th>
-			      <th width="150">REGDATE</th>
-			      <th width="150">VISITED</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			  <c:forEach items="${boardList }" var="bo" varStatus="status">
-			    <tr>
-			      <td>${status.count }</td>
-			      <td><a href="/board/detail.do?seq=${board.seq }">${bo.title }</a></td>
+			      <th>제목</th>
 			      <td>
-			      	<fmt:parseDate value="${board.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
-	      		  	<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" /></td>
-			      <td>${bo.visited }</td>
+			      	<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
+			      </td>
 			    </tr>
-			  </c:forEach>
+			    <tr>
+			      <th>내용</th>
+			      <td>
+			      	<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength=900 required></textarea>
+			      </td>
+			    </tr>
+			    <tr>
+	      			<td colspan="2">
+	      				<input type="submit" class="submit success button" value="글 등록" >
+	      				<a class="button" href="${path1 }/faq/list.do">글 목록</a>
+	      			</td>
+	      		</tr>
 			  </tbody>
 			</table>
-			<div class="button-group">
-				  <a class="button" href="${path1 }/board/insert.do">글쓰기</a>
-			</div>
 			</form>
 		</div>
     </div>

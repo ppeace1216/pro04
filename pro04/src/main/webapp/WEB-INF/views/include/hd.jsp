@@ -16,6 +16,7 @@
 <div class="top-bar">
   <div class="top-bar-left">
 <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text"><a href="/">D & O</a></li>
       <li>
         <a href="#Item-1">기업소개</a>
         <ul class="menu">

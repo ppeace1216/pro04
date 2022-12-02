@@ -71,3 +71,4 @@ insert into faq values(fseq.nextval, '세번재 답변', '세번째 답변 내�
 select * from faq;
 commit;
 select * from faq order by parno asc, lev asc;
+select parno from (select * from faq order by rownum desc) where rownum=1;

@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>공지수정</title>
+	<title>게시판 목록</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
@@ -22,29 +22,28 @@
 </header>
 <div class="content" id="content">
 	<div class="row column text-center">
-      <h2>공지사항 수정</h2>
+      <h2>자주하는 질문 작성</h2>
       <hr>
       <div class="container">
-      	<form action="${path1 }/board/edit.do" method="post">
+      	<form action="${path1 }/faq/qInsert.do" method="post">
 		   <table id="table1">
 			 <tbody>
-				<tr>
-	      			<th style="background-color:#dcdcdc">글 제목</th>
-	      			<td>
-	      				<input type="hidden" name="seq" id="seq" value="${dto.seq }" >
-	      				<input type="text" name="title" id="title" placeholder="제목 입력" value="${dto.title }" maxlength="98" required>
-	      			</td>
-	      		</tr>
-	      		<tr>
-	      			<th style="background-color:#dcdcdc">글 내용</th>
-	      			<td>
-	      				<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength="800" required>${dto.content }</textarea>
-	      			</td>
-	      		</tr>
-	      		<tr>
+			    <tr>
+			      <th>제목</th>
+			      <td>
+			      	<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
+			      </td>
+			    </tr>
+			    <tr>
+			      <th>내용</th>
+			      <td>
+			      	<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength=900 required></textarea>
+			      </td>
+			    </tr>
+			    <tr>
 	      			<td colspan="2">
-	      				<input type="submit" class="submit success button" value="글 수정" >
-	      				<a class="button" href="${path1 }/board/list.do">글 목록</a>
+	      				<input type="submit" class="submit success button" value="글 등록" >
+	      				<a class="button" href="${path1 }/faq/list.do">글 목록</a>
 	      			</td>
 	      		</tr>
 			  </tbody>
