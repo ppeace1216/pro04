@@ -77,7 +77,7 @@
 			      		<tr>
 			      			<th style="background-color:#dcdcdc">전화번호</th>
 			      			<td>
-			      				<input type="tel" name="tel" id="tel" placeholder="전화번호 입력" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="19" required>
+			      				<input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="19" required>
 			      			</td>
 			      		</tr>
 		      			<tr>

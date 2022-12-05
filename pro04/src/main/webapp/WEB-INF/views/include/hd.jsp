@@ -23,7 +23,7 @@
           <li>
           	<a href="#Item-1A">회사소개</a>
           	<ul class="menu">
-              <li><a href="WEP-INF/view/company/comInfo.jsp">회사소개</a></li>
+              <li><a href="${path1 }/WEP-INF/view/company/comInfo.jsp">회사소개</a></li>
               <li><a href="WEP-INF/company/ceo.jsp">CEO</a></li>
               <li><a href="#Item-1Biii">비전</a></li>
               <li><a href="#Item-1Biv">연혁</a></li>

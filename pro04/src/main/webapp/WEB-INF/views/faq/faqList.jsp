@@ -28,9 +28,9 @@
 			<table>
 			  <thead>
 			    <tr>
-			      <th width="50">NO</th>
-			      <th width="100">구분</th>
-			      <th width="500">제목</th>
+			      <th width="50" style="text-align:center;">NO</th>
+			      <th width="100" style="text-align:center;">구분</th>
+			      <th width="500" style="text-align:center;">제목</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -39,10 +39,10 @@
 			      <td>${status.count }</td>
 			      <td>
 				      <c:if test="${faq.lev==0}">
-					  <span>질문 ${faq.parno }</span>
+					  <span style="color:blue;">질문 ${faq.parno }</span>
 					  </c:if>
 					  <c:if test="${faq.lev==1}">
-					  <span>답변 ${faq.parno }</span>
+					  <span >답변 ${faq.parno }</span>
 					  </c:if>
 				  </td>
 			      <td><a href="/faq/detail.do?no=${faq.no }">${faq.title }</a></td>
