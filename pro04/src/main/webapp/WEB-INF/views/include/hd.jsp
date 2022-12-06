@@ -30,7 +30,7 @@
             </ul>
           </li>
           <li>
-          	<a href="#Item-1C">PR</a>
+          	<a href="#Item-1B">PR</a>
           	<ul class="menu">
               <li><a href="#Item-1Bi">뉴스</a></li>
               <li><a href="#Item-1Bii">홍보관</a></li>
