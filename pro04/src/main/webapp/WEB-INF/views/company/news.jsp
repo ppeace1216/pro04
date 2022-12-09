@@ -20,12 +20,23 @@
 	<!-- 헤더 부분 인클루드 -->
  	<jsp:include page="../include/hd.jsp"></jsp:include>
 </header>
-<div id="contentsWrap">
-	<section class="contents" id="P_PC_SI_41100">
-		<header class="contentsHeader">
-			<h2 class="pageTit">뉴스</h2>
-			<p class="pageTxt">D&O의 새로운 소식을 전해드립니다.</p>
-		</header>
+<nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">PR</a></li>
+    <li>
+      <span class="show-for-sr"></span>뉴스
+    </li>
+  </ul>
+</nav>
+<div class="content" id="content">
+	<div class="row column text-center">
+		<h2 class="pageTit">뉴스</h2>
+		<p class="pageTxt">
+			D&O의 새로운 소식을 전해드립니다.<br><br><br><br>
+		</p>
+	</div>
 		<ul class="defaultList">
 			<li>
 				<a href="#" onclick="return false;" class="detailLink" sno="2092">

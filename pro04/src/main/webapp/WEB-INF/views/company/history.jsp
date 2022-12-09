@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>회사소개</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
+	<link rel="stylesheet" type="text/css" href="../include/default.css" />
 	<style>
 	.page_aside { width: 200px; min-height:500px; float:left; }
     .year_fr { width: 1000px; min-height:500px; float:right; }
@@ -28,9 +29,23 @@
 	<!-- 헤더 부분 인클루드 -->
  	<jsp:include page="../include/hd.jsp"></jsp:include>
 </header>
-<div class="page_wrap">
-    <h2 class="page_title">회사연혁</h2>
-    <p class="pageTxt">D&O의 회사연혁을 소개합니다.</p>
+<nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">회사소개</a></li>
+    <li>
+      <span class="show-for-sr"></span>회사연혁
+    </li>
+  </ul>
+</nav>
+<div class="content" id="content">
+	<div class="row column text-center">
+		<h2 class="pageTit">회사연혁</h2>
+		<p class="pageTxt">
+			D&O의 회사연혁을 소개합니다.<br><br><br><br>
+		</p>
+	</div>
     <div class="page_aside">
         <h2 class="aside_tit">1975년~</h2>
     </div>

@@ -31,8 +31,8 @@
     	<div class="medium-7 large-6 cell">
           <h1>물리적 공간을 넘어 <br>다양한 일상과 경험을 담다</h1>
           <p class="subheader">D&O는 고객을 위한 새로운 가치를 개발하고, 특별한 경험의 기회를 제공하는 LG그룹의 서비스 혁신 기업입니다.</p>
-          <a href="" class="button">레저</a>
-          <a href="" class="button">AM</a>
+          <a href="${path2 }/business/leisure" class="button">레저</a>
+          <a href="${path2 }/business/am" class="button">AM</a>
         </div>
         <div class="show-for-large large-3 cell">
           <img src="resources/images/mainsub1.jpg" alt="picture of space">
@@ -41,7 +41,7 @@
         <div class="medium-5 large-3 cell">
           <div class="callout secondary">
 			<c:if test="${empty sid }">
-            <form action="${path1 }/member/loginCheck.do" method="post" name="loginForm">
+            <form action="${path2 }/member/loginCheck.do" method="post" name="loginForm">
               <div class="grid-x">
                 <div class="small-12 cell">
                   <label>Login ID
@@ -85,9 +85,12 @@
                 <div class="small-12 cell">
                   <label><span style="display:none">${serverTime }</span></label>
                 </div>
-                <a href="${path2 }/member/logout.do" class="button">로그아웃</a>
+                <a href="${path2 }/member/logout.do" class="button alert">로그아웃</a>
                 <c:if test='${sid=="admin" }'>
-                <a href="${path2 }/member/" class="button" style="float:left; margin-right:20px">관리자 페이지로</a>
+                <a href="${path2 }/member/list.do" class="button" style="float:left; margin-right:20px">관리자 페이지로</a>
+                </c:if>
+                <c:if test='${sid!="admin" }'>
+                <a href="${path2 }/member/read.do" class="button" style="float:left; margin-right:20px">회원 정보 보기</a>
                 </c:if>
               </div>
 			</c:if>

@@ -14,31 +14,43 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>회사소개</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
+	<style>
+	.contentsTit {position: relative; margin-top: 100px; font-size: 28px; font-weight: 600; text-align: center; line-height: 1.5;}
+	.contentsTxt {margin-top: 20px; text-align: center;}
+	.diagramContents {margin-top: 0px; text-align: center;}
+	</style>
 </head>
 <body>
 <header id="header">
 	<!-- 헤더 부분 인클루드 -->
  	<jsp:include page="../include/hd.jsp"></jsp:include>
 </header>
-<div id="contentsWrap">
-	<section class="contents" id="P_PC_SI_13000">
-		<header class="contentsHeader">
-			<h2 class="pageTit">비전</h2>
-			<p class="pageTxt">D&O의 비전을 소개합니다.</p>
-		</header>
-
-		<h3 class="contentsTit">비전</h3>
-		<p class="contentsTxt">
-			기업 고객의 비즈니스 성공과, 개인 고객의 풍요로운 삶을 위한 새로운 공간가치를 창조하는 D&O
+<nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">회사소개</a></li>
+    <li><span class="show-for-sr"></span>비전</li>
+  </ul>
+</nav>
+<div class="content" id="content">
+	<div class="row column text-center">
+		<h1 class="pageTit">비전</h1>
+		<p class="pageTxt">
+			D&O의 비전을 소개합니다.<br><br><br><br>
 		</p>
-		<article class="diagramWrap" data-type="table">
-			<div class="diagramContents">
-				<div class="diagramArea">
-					<img src="../resources/images/img_Vision.png" alt="비전 다이어그램">
-				</div>
+	</div>
+	<h3 class="contentsTit">비전</h3>
+	<p class="contentsTxt">
+		기업 고객의 비즈니스 성공과, 개인 고객의 풍요로운 삶을 위한 새로운 공간가치를 창조하는 D&O
+	</p>
+	<article class="diagramWrap" data-type="table">
+		<div class="diagramContents">
+			<div class="diagramArea">
+				<img src="../resources/images/img_Vision.png" alt="비전 다이어그램">
 			</div>
-		</article>
-	</section>
+		</div>
+	</article>
 </div>
 <footer id="footer" class="footer-nav row expanded collapse">
 	<!-- 푸터 부분 인클루드 -->
