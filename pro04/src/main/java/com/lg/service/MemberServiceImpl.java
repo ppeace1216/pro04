@@ -40,36 +40,9 @@ public class MemberServiceImpl implements MemberService{
 		memberDao.memberInsert(dto);
 	}
 	
-	//컨트롤러에서 로그인 처리
 	@Override
-	public MemberDTO signIn(MemberDTO mdto) throws Exception {
-		return memberDao.signIn(mdto);
-	}
-	
-	//서비스에서 로그인 처리
-	@Override
-	public boolean login(HttpServletRequest request) throws Exception {	
-		HttpSession session = request.getSession();
-		boolean loginSuccess = false;
-		MemberDTO mdto = new MemberDTO();
-		
-		mdto.setId(request.getParameter("id"));
-		mdto.setPw(request.getParameter("pw"));
-		
-		MemberDTO login = memberDao.login(mdto);
-		
-		loginSuccess =  pwdEncoder.matches(mdto.getPw(), login.getPw());
-		if(login != null && loginSuccess==true) {
-			session.setAttribute("member", login);
-			session.setAttribute("sid", login.getId());
-			loginSuccess = true;
-		}
-		return loginSuccess;
-	}
-	
-	@Override
-	public MemberDTO loginCheck(MemberDTO mdto) throws Exception {
-		return memberDao.loginCheck(mdto);
+	public MemberDTO login(MemberDTO mdto) throws Exception {
+		return memberDao.login(mdto);
 	}
 
 	@Override

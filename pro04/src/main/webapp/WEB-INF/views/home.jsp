@@ -87,7 +87,7 @@
                 </div>
                 <a href="${path2 }/member/logout.do" class="button alert">로그아웃</a>
                 <c:if test='${sid=="admin" }'>
-                <a href="${path2 }/member/list.do" class="button" style="float:left; margin-right:20px">관리자 페이지로</a>
+                <a href="${path2 }/member/list.do" class="button" style="float:left; margin-right:20px">회원 목록 보기</a>
                 </c:if>
                 <c:if test='${sid!="admin" }'>
                 <a href="${path2 }/member/read.do" class="button" style="float:left; margin-right:20px">회원 정보 보기</a>

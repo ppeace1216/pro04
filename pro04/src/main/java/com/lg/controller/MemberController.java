@@ -103,46 +103,11 @@ public class MemberController {
 		return "redirect:/";
 	}
 	
-	//로그인 폼 로딩
-	@RequestMapping("loginForm.do")  
-	public String memberLoginForm(Model model) throws Exception {
-		return "member/loginForm";
-	}
-	
-	//로그인 	- 컨트롤러에서 세션 처리
-	@RequestMapping(value="signin.do", method = RequestMethod.POST)
-	public String memberSignin(@RequestParam String id, @RequestParam String pw, HttpServletRequest req, RedirectAttributes rttr) throws Exception {
-		session.invalidate();
-		MemberDTO mdto = new MemberDTO();
-		mdto.setPw(pw);
-		mdto.setId(id);
-		MemberDTO login = memberService.signIn(mdto);
-		boolean loginSuccess = pwdEncoder.matches(mdto.getPw(), login.getPw());
-		if(loginSuccess && login!=null) {
-			session.setAttribute("member", login);
-			session.setAttribute("sid", id);
-			return "redirect:/";
-		} else {
-			return "redirect:loginForm.do";
-		}
-	} 
-	
-	//로그인 - Service에서 세션 처리
-	@RequestMapping(value="login.do", method = RequestMethod.POST)
-	public String memberLogin(MemberDTO mdto, HttpServletRequest req, RedirectAttributes rttr) throws Exception {
-		boolean loginSuccess = memberService.login(req);
-		if(loginSuccess) {		
-			return "home";
-		} else {
-			return "redirect:loginForm.do";
-		}
-	}
-	
 	//Ajax를 이용하는 방법
 	@RequestMapping(value="loginCheck.do", method = RequestMethod.POST)
 	public String memberLoginCtrl(MemberDTO mdto, RedirectAttributes rttr) throws Exception {
 		session.getAttribute("member");
-		MemberDTO member = memberService.loginCheck(mdto);
+		MemberDTO member = memberService.login(mdto);
 		boolean mat = pwdEncoder.matches(mdto.getPw(), member.getPw());
 		if(mat==true && member!=null) {
 			session.setAttribute("member", member);

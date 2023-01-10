@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.lg.controller.MemberController" project="pro04" 
     file="/pro04/src/main/java/com/lg/controller/MemberController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="87" y="118"/>    
+    <position height="-1" width="-1" x="137" y="289"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="com.lg.service.MemberService" project="pro04" 
     file="/pro04/src/main/java/com/lg/service/MemberService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="294" y="119"/>    
+    <position height="-1" width="-1" x="489" y="138"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </interface>  
   <class id="3" language="java" name="com.lg.service.MemberServiceImpl" project="pro04" 
     file="/pro04/src/main/java/com/lg/service/MemberServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="295" y="259"/>    
+    <position height="-1" width="-1" x="488" y="443"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.lg.dto.MemberDTO" project="pro04" 
     file="/pro04/src/main/java/com/lg/dto/MemberDTO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="945" y="283"/>    
+    <position height="-1" width="-1" x="1019" y="360"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <interface id="5" language="java" name="com.lg.dao.MemberDAO" project="pro04" 
     file="/pro04/src/main/java/com/lg/dao/MemberDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="499" y="119"/>    
+    <position height="-1" width="-1" x="776" y="139"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </interface>  
   <class id="6" language="java" name="com.lg.dao.MemberDAOImpl" project="pro04" 
     file="/pro04/src/main/java/com/lg/dao/MemberDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="502" y="268"/>    
+    <position height="-1" width="-1" x="776" y="444"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -56,36 +56,36 @@
     </display>  
   </class>  
   <association id="7">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="8" name="memberService">        
-        <position height="0" width="0" x="0" y="0"/>      
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="8" name="memberDao">        
+        <position height="0" width="0" x="277" y="20"/>      
       </attribute>      
       <multiplicity id="9" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="10">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="11">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="12" name="memberDao">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="13" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="277" y="20"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="14">    
+  <association id="10">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="11" name="memberService">        
+        <position height="0" width="0" x="195" y="19"/>      
+      </attribute>      
+      <multiplicity id="12" minimum="0" maximum="1">        
+        <position height="0" width="0" x="195" y="19"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="13">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="14">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

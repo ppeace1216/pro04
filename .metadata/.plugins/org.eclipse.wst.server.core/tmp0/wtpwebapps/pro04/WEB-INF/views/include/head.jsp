@@ -19,31 +19,35 @@
 <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <link rel="stylesheet" href="resources/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="${path0 }/include/default.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
 <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="${path0 }/resources/css/default.css" />
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
 <script>
   $(document).ready(function(){
-	  $(document).foundation();
+    $(document).foundation();
   });
 </script>
 <style>
 ul { list-style:none; }
 #gnb > ul > li[role="menuitem"] { height:38px; }
-#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; font-size:30px}
+.top-bar {background-color: rgb(211, 235, 244);}
+.top-bar, .top-bar ul {background-color: rgb(211, 235, 244); color: rgb(50, 50, 50);}
+ul.menu > li {font-size: 25px; font-weight: 100;}
+ul.menu > li:hover { background-color: rgb(255, 255, 255); font-weight: 700;}
+.menu-text {margin:0; font-size: 30px; font-weight: 900; }
 .h1 { padding-top:0.9rem; padding-bottom:0.3rem; }
 .container { clear:both; width:1280px; margin:0 auto; }
 .container::after { content:""; display:block; width:100%; clear:both; }
 
-
 .breadcrumbs { margin:auto 50px; padding-left:30px; line-height: 60px; border-bottom:3px solid #eee;}
 .breadcrumbs li {font-size:15px}
 .pageTxt{margin-bottom:100px; border-bottom:3px solid #eee;}
-
 .content {margin:50px auto; }
 
 #table1 th { border-bottom:1px solid #fff; }
@@ -55,4 +59,6 @@ ul { list-style:none; }
 #footer .footer-nav-left .footer-copyright {line-height:10px;}
 #footer > article > div > ul > li.footer-nav-item { float:left; width:auto; padding:1.8rem;	min-width:40px;}
 #footer > article > div.footer-nav-right > ul > li.footer-nav-item {width:25%; height:25%;}
+.lead, .subheader { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.main {clear:both; margin:0; margin-bottom:30px;}
 </style>

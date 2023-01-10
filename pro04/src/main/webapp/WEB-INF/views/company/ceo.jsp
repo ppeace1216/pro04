@@ -15,6 +15,12 @@
 	<title>회사소개</title>
 	<link rel="stylesheet" type="text/css" href="../include/default.css" />
 	<jsp:include page="../include/head.jsp"></jsp:include>
+	<style>
+	.pageTxt{margin-bottom:100px; border-bottom:3px solid #eee;}
+	.content {margin:50px auto; }
+	.defaultImgContents {background-color: rgb(226, 245, 220);}
+	#table1 th { border-bottom:1px solid #fff; }
+	</style>
 </head>
 <body>
 <header id="header">

@@ -14,6 +14,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>회사소개</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
+	<style>
+	.defaultTabWrap .defaultTabCont {margin-top: 50px;text-align: left;}
+	[class*="BoardList"] .defaultList {border-top: 1px solid #333;}
+	.thumbnailBoardList .defaultList > li:not(.listNoneArea) {padding-top: 30px;padding-bottom: 30px;}
+	[class*="BoardList"] .defaultList > li {border-bottom: 1px solid #d7d7d7;}
+	.defaultList > li {position: relative;padding: 20px 30px;}
+	.thumbnailBoardList .defaultList > li > a {min-height: 204px;padding-top: 35px;padding-left: 360px; overflow:hidden;}
+	.defaultList > li > a {display: block; overflow:hidden;}
+	.thumbnailBoardList .defaultList .listImg {position: absolute;top: 50%;left: 0;width: 360px;height: 204px;margin-top: -102px;}
+	.defaultList .listTit { overflow: hidden; text-overflow: ellipsis;white-space: nowrap; font-size: 20px; font-weight: 600;}
+	.thumbnailBoardList .defaultList * +.listTxt {margin-top: 20px;}
+	.defaultList .listTit ~ .listTxt {display: block;display: -webkit-box;overflow: hidden;text-overflow: ellipsis;max-height: 47px;-webkit-line-clamp: 2;-webkit-box-orient: vertical; color: #444;}
+	.defaultList .listTxt { line-height: 1.7; word-wrap: break-word;}
+	.defaultList .listTit ~ *:not(.listTxt), .defaultList * ~ .listTit, .defaultList * ~ .badgeTxt {margin-top: 23px;}
+	.defaultList .dateTxt {color: #888;}
+	.dateTxt {display: inline-block;}
+	.defaultList > li > a:after {content: "";display: block;clear: both;visibility: hidden;height: 0;}
+	</style>
 </head>
 <body>
 <header id="header">

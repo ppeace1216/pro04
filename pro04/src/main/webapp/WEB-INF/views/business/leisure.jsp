@@ -20,54 +20,44 @@
 	<!-- 헤더 부분 인클루드 -->
  	<jsp:include page="../include/hd.jsp"></jsp:include>
 </header>
+<nav aria-label="You are here:" role="navigation">
+	<ul class="breadcrumbs">
+	  <li><a href="index2.html">Home</a></li>
+	  <li><a href="leisure.html">사업분야</a></li>
+	  <li><span class="show-for-sr"></span>레저</li>
+	</ul>
+</nav>
 <div class="content" id="content">
+	<div class="row column text-center">
+		<h2 class="pageTit">레저</h2>
+		<p class="pageTxt">
+			생활 속 프리미엄 리조트를 지향하는 <b class="boldTxt">곤지암리조트</b><br>
+			깊은 여유와 품격을 선사하는 명문 비즈니스 <b class="boldTxt">곤지암골프클럽</b><br>
+			자연과 생활이 하나되는 웰빙공간 <b class="boldTxt">LG생활연수원</b>
+		</p>
+		<div class="btnAreaDefault">
+			<a href="https://www.konjiamresort.co.kr/main.dev" target="_blank" class="btnDefaultLink" target="_blank">곤지암리조트 바로가기<span class="iconLink"></span></a>
+			<a href="https://www.konjiamgolfclub.co.kr/index.dev" target="_blank" class="btnDefaultLink" target="_blank">곤지암골프클럽 바로가기<span class="iconLink"></span></a>
+		</div>
+	
+		<a href="#targetContent" class="btnSetScrollMove"></a>
+	</div>
 	<section class="contents" id="P_PC_BD_40000">
-		<header class="contentsHeader">
-			<div class="linkTabListWrap">
-				<ul class="linkTabList">
-					<li class="business04 active">
-					  <a href="/main/department/P_PC_BD_40000.do?menuCd=BD40&amp;siteCd=PPC" class="btnTabLink">
-						<strong class="linkTabTit">레저</strong>
-						<p class="linkTabTxt">최고의 힐링라이프·<br>깊은 여유와 품격을 선물합니다.</p>
-					  </a>
-					</li>
-					<li class="business05">
-					  <a href="/main/department/P_PC_BD_50000.do?menuCd=BD50&amp;siteCd=PPC" class="btnTabLink">
-						<strong class="linkTabTit">AM</strong>
-						<p class="linkTabTxt">고객에게 최고의 자산 운영과<br>투자 서비스를 제공합니다.</p>
-					  </a>
-					</li>
-				</ul>						
-			</div>
-			<h2 class="pageTit">레저</h2>
-			<p class="pageTxt">
-				생활 속 프리미엄 리조트를 지향하는 <b class="boldTxt">곤지암리조트</b><br>
-				깊은 여유와 품격을 선사하는 명문 비즈니스 <b class="boldTxt">곤지암골프클럽</b><br>
-				자연과 생활이 하나되는 웰빙공간 <b class="boldTxt">LG생활연수원</b>
-			</p>
-			<div class="btnAreaDefault">
-				<a href="https://www.konjiamresort.co.kr/main.dev" target="_blank" class="btnDefaultLink" target="_blank">곤지암리조트 바로가기<span class="iconLink"></span></a>
-				<a href="https://www.konjiamgolfclub.co.kr/index.dev" target="_blank" class="btnDefaultLink" target="_blank">곤지암골프클럽 바로가기<span class="iconLink"></span></a>
-			</div>
-		
-			<a href="#targetContent" class="btnSetScrollMove"></a>
-		</header>
-		
 		<h3 id="targetContent" class="contentsTit">곤지암리조트</h3>
 		<!--strong class="contentsSubTit">40분만에 만나는 아주 특별한 세상 사계절 종합리조트</strong-->
 		<div class="threeColumnImgWrap">
 			<div class="formatImgContents">
-				<span class="img"><img src="/images/pc/contents/main/img_formatResort1.png" alt="편리한 접근성 이미지"></span>
+				<span class="img"><img src="${path1 }/resources/images/resort1.png" alt="편리한 접근성 이미지"></span>
 				<strong class="imgConTit">편리한 접근성</strong>
 				<p class="imgConTxt">서울 강남에서 불과 40분 만에<br>도착할 수 있는 뛰어난 접근성을 자랑</p>
 			</div>
 			<div class="formatImgContents">
-				<span class="img"><img src="/images/pc/contents/main/img_formatResort2.png" alt="수도권 최대 스키장 이미지"></span>
+				<span class="img"><img src="../resources/images/resort2.png" alt="수도권 최대 스키장 이미지"></span>
 				<strong class="imgConTit">수도권 최대 스키장</strong>
 				<p class="imgConTxt">수도권 최대 스키장과<br>국내 최초로 시간제 리프트권 도입</p>
 			</div>
 			<div class="formatImgContents">
-				<span class="img"><img src="/images/pc/contents/main/img_formatResort3.png" alt="고품격 시설 이미지"></span>
+				<span class="img"><img src="../resources/images/resort3.png" alt="고품격 시설 이미지"></span>
 				<strong class="imgConTit">고품격 시설</strong>
 				<p class="imgConTxt">호텔형 부티크 객실,<br>격조 높은 서비스와 최고의 시설</p>
 			</div>
@@ -124,17 +114,17 @@
 		<!--strong class="contentsSubTit">명품비즈니스 골프클럽</strong-->
 		<div class="threeColumnImgWrap">
 			<div class="formatImgContents">
-				<span class="img"><img src="/images/pc/contents/main/img_formatGolfClub1.png" alt="뛰어난 자연경관 이미지"></span>
+				<span class="img"><img src="../resources/images/golf1.png" alt="뛰어난 자연경관 이미지"></span>
 				<strong class="imgConTit">뛰어난 자연경관</strong>
 				<p class="imgConTxt">경기도 곤지암 정광산 자락에 위치한<br>곤지암골프클럽</p>
 			</div>
 			<div class="formatImgContents">
-				<span class="img"><img src="/images/pc/contents/main/img_formatGolfClub2.png" alt="최상의 코스품질 이미지"></span>
+				<span class="img"><img src="../resources/images/golf2.png" alt="최상의 코스품질 이미지"></span>
 				<strong class="imgConTit">최상의 코스품질</strong>
 				<p class="imgConTxt">총 18홀, 32만평 부지 위에<br>마운틴 레이크 코스로 구성</p>
 			</div>
 			<div class="formatImgContents">
-				<span class="img"><img src="/images/pc/contents/main/img_formatGolfClub3.png" alt="격조 높은 고객서비스 이미지"></span>
+				<span class="img"><img src="../resources/images/golf3.png" alt="격조 높은 고객서비스 이미지"></span>
 				<strong class="imgConTit">격조 높은 고객서비스</strong>
 				<p class="imgConTxt">호수의 아름다움과 한 폭의 동양화가<br>펼쳐진 듯한 웅장함이 조화를 이루어<br>깊은 여유와 품격을 선물</p>
 			</div>
@@ -190,17 +180,17 @@
 		<h4 id="targetContent" class="contentsTit">LG생활연수원</h4>
 		<div class="threeColumnImgWrap">
 		  <div class="formatImgContents">
-			<span class="img"><img src="/images/pc/contents/main/img_formatlg1.png" alt="재충전의 공간 이미지"></span>
+			<span class="img"><img src="../resources/images/lg1.png" alt="재충전의 공간 이미지"></span>
 			<strong class="imgConTit">재충전의 공간</strong>
 			<p class="imgConTxt">창문틈으로 스며드는<br>대자연의 상쾌한 향기</p>
 		  </div>
 		  <div class="formatImgContents">
-			<span class="img"><img src="/images/pc/contents/main/img_formatlg2.png" alt="온천욕 이미지"></span>
+			<span class="img"><img src="../resources/images/lg2.png" alt="온천욕 이미지"></span>
 			<strong class="imgConTit">온천욕</strong>
 			<p class="imgConTxt">최고의 수질을 자랑하는<br>49∼53℃ 알칼리성 온천</p>
 		  </div>
 		  <div class="formatImgContents">
-			<span class="img"><img src="/images/pc/contents/main/img_formatlg3.png" alt="해수욕 이미지"></span>
+			<span class="img"><img src="../resources/images/lg3.png" alt="해수욕 이미지"></span>
 			<strong class="imgConTit">해수욕</strong>
 			<p class="imgConTxt">관동팔경을 비롯한<br>가슴이 시원한 동해바다</p>
 		  </div>
@@ -244,7 +234,6 @@
 			</ul>
 		  </div>
 		</div>
-		
 	</section>
 </div>
 <footer id="footer" class="footer-nav row expanded collapse">
