@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>자유게시판 작성</title>
+		<title>고객 문의 작성</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
 	<script type="text/javascript" src="${path1 }/resources/ckeditor/ckeditor.js"></script>
 </head>
@@ -23,7 +23,7 @@
 </header>
 <div class="content" id="con">
 	<div class="row column text-center">
-	     <h2>자유게시판 수정</h2>
+	     <h2>고객 문의 작성</h2>
 	     <hr>
 	     <div class="container">
 	     	<form action="${path1 }/free/insert.do" method="post">

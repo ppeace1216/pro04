@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>게시판 목록</title>
+	<title>채용공고</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
@@ -22,7 +22,7 @@
 </header>
 <div class="content" id="content">
 	<div class="row column text-center">
-      <h2>공지사항 목록</h2>
+      <h2>채용공고</h2>
       <hr>
       <div class="container">
 		     <table>
@@ -38,7 +38,12 @@
 			  <c:forEach items="${boardList }" var="bo" varStatus="status">
 			    <tr>
 			      <td>${status.count }</td>
+			      <c:if test="${empty sid }">
+			      <td><a href="/board/nonmember.do">${bo.title }</a></td>
+			      </c:if>
+			      <c:if test="${not empty sid }">
 			      <td><a href="/board/detail.do?seq=${bo.seq }">${bo.title }</a></td>
+			      </c:if>
 			      <td>
 			      	<fmt:parseDate value="${bo.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
 	      		  	<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
@@ -49,7 +54,9 @@
 			  </tbody>
 			</table>
 			<div class="button-group">
+			<c:if test='${sid=="admin" }'>
 				  <a class="button" href="${path1 }/board/insert.do">글쓰기</a>
+			</c:if>
 			</div>
 		</div>
     </div>

@@ -45,15 +45,14 @@
 			      		<tr>
 			      			<th style="background-color:#dcdcdc">비밀번호</th>
 			      			<td>
-			      				<input type="password" name="pw" id="pw" placeholder="비밀번호 입력" maxlength="12" required>
-			      				<!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$"  -->
+			      				<input type="password" name="pw" id="pw" placeholder="비밀번호 입력" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" required>
+			      				<p id="msg" style="padding-left:0.5rem">영문대소문자,특수문자,숫자를 조합하여 8~12자를 입력해주세요.</p>
 			      			</td>
 			      		</tr>
 			      		<tr>
 			      			<th style="background-color:#dcdcdc">비밀번호 확인</th>
 			      			<td>
-			      				<input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인 입력" maxlength="12" required>
-			      				<!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$"  -->
+			      				<input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인 입력" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" required>
 			      			</td>
 			      		</tr>
 			      		<tr>

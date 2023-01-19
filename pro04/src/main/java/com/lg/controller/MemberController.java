@@ -117,7 +117,7 @@ public class MemberController {
 		} else {
 			session.setAttribute("member", null);
 			rttr.addFlashAttribute("msg", false);
-			return "redirect:loginForm.do";
+			return "redirect:/";
 		}
 	}
 	

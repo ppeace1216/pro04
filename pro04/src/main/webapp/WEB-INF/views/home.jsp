@@ -100,7 +100,10 @@
           <img src="resources/images/main.png" alt="picture of space">
         </div>
       </div>
-    
 </article>
+<footer id="footer" class="footer-nav row expanded collapse">
+	<!-- 푸터 부분 인클루드 -->
+	<jsp:include page="include/ft.jsp"></jsp:include>
+</footer>
 </body>
 </html>

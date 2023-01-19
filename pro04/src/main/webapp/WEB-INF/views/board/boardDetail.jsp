@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>상세보기</title>
+	<title>채용공고</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
@@ -22,7 +22,7 @@
 </header>
 <div class="content" id="content">
 	<div class="row column text-center">
-      <h2>공지사항 상세보기</h2>
+      <h2>채용공고 상세보기</h2>
       <hr>
       <div class="container">
 		   <table id="table1">
@@ -55,8 +55,10 @@
 			</table>
 				<div class="button-group">
 				  <a class="button" href="${path1 }/board/list.do">글 목록</a>
+				  <c:if test='${sid=="admin" }'>
 				  <a class="button" href="${path1 }/board/delete.do?seq=${dto.seq}">글 삭제</a>
 				  <a class="button" href="${path1 }/board/edit.do?seq=${dto.seq}">글 수정</a>
+				  </c:if>
 				</div>
 		</div>
     </div>

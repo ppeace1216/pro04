@@ -90,7 +90,7 @@
 			<version>1</version>
 		</dependency>
 				
-		<!-- Servlet -->
+		<!-- JSP Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>

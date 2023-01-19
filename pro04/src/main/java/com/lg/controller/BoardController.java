@@ -27,6 +27,10 @@ public class BoardController {
 		model.addAttribute("boardList",boardList);
 		return "board/boardList";
 	}
+	@RequestMapping("nonmember.do")
+	public String nonmember(){
+		return "board/nonmember";
+	}
 	@GetMapping("detail.do")
 	public String getBoardDetail(HttpServletRequest request, Model model) throws Exception {
 		int seq = Integer.parseInt(request.getParameter("seq"));

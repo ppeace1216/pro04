@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>게시판 목록</title>
+	<title>채용공고 작성</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
@@ -22,7 +22,7 @@
 </header>
 <div class="content" id="content">
 	<div class="row column text-center">
-      <h2>공지사항 작성</h2>
+      <h2>채용공고 작성</h2>
       <hr>
       <div class="container">
       	<form action="${path1 }/board/insert.do" method="post">

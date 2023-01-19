@@ -28,6 +28,10 @@
       	<form action="${path1 }/faq/aInsert.do" method="post">
 		   <table id="table1">
 			 <tbody>
+			 	<tr>
+			 	  <th>구분번호</th>
+			 	  <input type="text" name="parno" id="parno" readonly>
+			 	</tr>
 			    <tr>
 			      <th>제목</th>
 			      <td>

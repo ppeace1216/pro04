@@ -65,10 +65,12 @@
     </ul>
   </div>
   <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
+	<ul class="menu">
+	<c:if test="${not empty sid }">
+		<li><a href="#"><strong>${sid }</strong>님</a></li>
+		<li><a href="${path1 }/member/logout.do" class="button alert">로그아웃</a></li>
+	</c:if>
+	</ul>
   </div>
 </div>
 </body>

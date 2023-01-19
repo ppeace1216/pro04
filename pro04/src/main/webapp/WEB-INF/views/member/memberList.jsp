@@ -13,6 +13,9 @@
 	<title>회원목록</title>
 	<!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+    .memberList { clear:both; width:1280px; margin:0 auto; margin-bottom:10%}
+    </style>
 </head>
 <body>
 	<header id="header">
@@ -23,7 +26,7 @@
     <div class="row column text-center">
       <h2 class="h1">회원 목록</h2>
       <hr>
-      <table>
+      <table class=memberList>
       	<thead>
       		<tr>
       			<th width="80">No</th>
