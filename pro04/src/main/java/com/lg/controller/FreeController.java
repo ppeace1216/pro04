@@ -113,10 +113,10 @@ public class FreeController {
     		if(!folder.exists()){
     			try{
     				folder.mkdirs(); // 폴더 생성
-    		}catch(Exception e){
-    			e.getStackTrace();
+	    		}catch(Exception e){
+	    			e.getStackTrace();
+	    		}
     		}
-    	}
     	
     	out = new FileOutputStream(new File(ckUploadPath));
     	out.write(bytes);
